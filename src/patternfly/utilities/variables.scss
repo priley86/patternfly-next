@@ -117,8 +117,9 @@ $pf-global--link--hover--TextDecoration:  underline !default;
 
 // Borders
 $pf-global--BorderWidth:         1px !default;
+$pf-global--md--BorderWidth:     3px !default;
 $pf-global--dark--BorderColor:   $pf-color-black-400 !default;
-$pf-global--light--BorderColor:  $pf-color-black-400 !default;
+$pf-global--light--BorderColor:  $pf-color-black-200 !default;
 
 
 // Fonts
@@ -251,6 +252,7 @@ $pf-global--lg--LineHeight:         1.8 !default;
 
   // Borders
   --pf-global--BorderWidth:         $pf-global--BorderWidth;
+  --pf-global--md--BorderWidth:     $pf-global--md--BorderWidth;
   --pf-global--dark--BorderColor:   $pf-global--dark--BorderColor;
   --pf-global--light--BorderColor:  $pf-global--light--BorderColor;
 

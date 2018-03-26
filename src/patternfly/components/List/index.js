@@ -4,17 +4,29 @@ import './styles.scss'
 
 export const Docs = docs;
 
-export const ListItem = ({showToggle = false, primary, secondary, children}) => {
+export const ListItem = ({showToggle = false, isExpanded = false, primary, secondary, children}) => {
   return (
-    <div className="pf-c-list__item">
-      <div className="pf-c-list__header">
+    <div className={`pf-c-list-item ${showToggle && 'pf-is-expanded'}`}>
+
+
+      <div className="pf-c-list-item__header">
+
+
         <div className="pf-l-split">
-          {showToggle && <div className="pf-l-split__secondary"><i className="fas fa-chevron-down"/></div>}
+          {showToggle && (
+            <div className="pf-l-split__secondary">
+              <button className="" aria-label="Chevron down">
+                <i className={`fas ${!isExpanded && 'fa-chevron-right'} ${isExpanded && 'fa-chevron-down'}`}/>
+              </button>
+            </div>
+          )}
           <div className="pf-l-split__primary">{primary}</div>
           <div className="pf-l-split__secondary">{secondary}</div>
         </div>
       </div>
-      {children && <div className="pf-c-list_body">{children}</div>}
+
+
+      {children && isExpanded && <div className="pf-c-list-item__body">{children}</div>}
     </div>
   )
 };

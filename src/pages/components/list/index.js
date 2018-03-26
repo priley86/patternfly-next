@@ -11,7 +11,7 @@ export default () => {
     <Documentation docs={Docs}>
       <Example heading="List with toggle">
         <List>
-          <ListItem showToggle={true} primary={primary} secondary={secondary}>
+          <ListItem showToggle={true} isExpanded={true} primary={primary} secondary={secondary}>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </ListItem>
           <ListItem showToggle={true} primary={primary} secondary={secondary}>
